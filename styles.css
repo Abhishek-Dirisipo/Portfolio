@@ -121,58 +121,44 @@ header nav ul li a {
     margin: 10px 0;
 }
 
-/* Contact */
-form {
+/* Certificates */
+.certificates-carousel {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 500px;
-    margin: 0 auto;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+    gap: 20px;
+    padding: 20px 0;
 }
 
-form input,
-form textarea {
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.certificate {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
 }
 
-form button {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
+/* Carousel Buttons */
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
     border: none;
+    color: #333;
+    font-size: 24px;
     cursor: pointer;
-    border-radius: 5px;
+    z-index: 1;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
 }
 
 /* Footer */
 footer {
     background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    header h1, header nav {
-        float: none;
-        text-align: center;
-    }
-    
-    header nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-    
-    .projects-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-}
+    color:
