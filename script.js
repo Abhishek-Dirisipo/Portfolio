@@ -51,3 +51,33 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial call to handle certificate size on page load
     handleCertificateSize();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize the Flickity carousel
+    var flkty = new Flickity('.certificates-carousel', {
+        wrapAround: true,
+        cellAlign: 'left',
+        contain: true
+    });
+
+    // Handle previous button click
+    document.querySelector('.prev-btn').addEventListener('click', function() {
+        flkty.previous();
+    });
+
+    // Handle next button click
+    document.querySelector('.next-btn').addEventListener('click', function() {
+        flkty.next();
+    });
+
+    // Handle certificate click to enlarge
+    var certificates = document.querySelectorAll('.certificate img');
+    certificates.forEach(function(certificate) {
+        certificate.addEventListener('click', function() {
+            certificates.forEach(function(c) {
+                c.closest('.certificate').classList.remove('enlarged');
+            });
+            this.closest('.certificate').classList.add('enlarged');
+        });
+    });
+});
