@@ -170,43 +170,108 @@
 	</div>
 </section>
 <!-- //content-grids-->
-
 <section class="w3l-content-6">
-	<!-- /content-6-section -->
-	  <div class="content-6-mian py-5">
-			 <div class="container py-lg-3">
-					 <div class="content-info-in row">
-							 <div class="content-gd col-lg-5">
-								<h3 class="hny-title">Motivated by the desire to <br>achieve<span class="dot-1">.</span>
-							 </div>
-							 <div class="content-gd col-lg-7">
-								<div class="progress-info">
-									<h6 class="progress-tittle">Develop innovative solutions</h6>
-									<div class="progress">
-										<div class="progress-bar progress-bar-striped" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-										</div>
-									</div>
-								</div>
-								<div class="progress-info">
-									<h6 class="progress-tittle">Protect data and privacy
-									</h6>
-									<div class="progress">
-										<div class="progress-bar progress-bar-striped" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-										</div>
-									</div>
-								</div>
-								<div class="progress-info">
-									<h6 class="progress-tittle">Discover vulnerabilities</h6>
-									<div class="progress">
-										<div class="progress-bar progress-bar-striped" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-										</div>
-									</div>
-								</div>
-							 </div>
-					 </div>
-				 </div>
-			 </div>
-	 </section>
+    <!-- /content-6-section -->
+    <div class="content-6-main py-5">
+        <div class="container py-lg-3">
+            <div class="content-info-in row">
+                <div class="content-gd col-lg-5">
+                    <h3 class="hny-title">Projects done by <br>Me<span class="dot-1">.</span></h3>
+                </div>
+                <div class="content-gd col-lg-7">
+                    <div class="scroll-frame">
+                        <div class="scroll-content">
+                            <div class="progress-info">
+                                <h6 class="progress-tittle">Provided free assistance in fixing vulnerabilities for more than 60 public websites.</h6>
+                                <p>Played a pivotal role in resolving over 100+ bugs on open public websites, earned certification as an Outstanding Researcher for my contributions in fixing more than 80 websites: 
+                                    <a href="https://www.openbugbounty.org/researchers/AbhishekDirisipo/certificate" target="_blank">Certification Link</a>
+                                </p>
+                            </div>
+                            <div class="progress-info">
+                                <h6 class="progress-tittle">Vulnerability assessment and penetration testing on Thermofisher.com website</h6>
+                                <p>Performed VAPT on Thermofisher website and found critical bugs like: 3 SSRF, 1 RCE, and 6 XSS.</p>
+                            </div>
+                            <div class="progress-info">
+                                <h6 class="progress-tittle">Performed VAPT on rts.ae (Dubai domains of 30+)</h6>
+                                <p>As a cybersecurity analyst in Amyntor Tech Solutions, I have done VAPT and provided a report with appropriate measures.</p>
+                            </div>
+                            <div class="progress-info">
+                                <h6 class="progress-tittle">A Single python tool to find XSS, DOM XSS, SSRF, SSTI, Blind RCE & SQL injections</h6>
+                                <p>Developed a python tool to find XSS (cross-site scripting) bug with multiple encodings and parameters to find bugs for my personal use. Released for Windows (.exe) & Python3 (.py): 
+                                    <a href="https://github.com/Abhishek-Dirisipo/Ultimate-XSS-Initiator" target="_blank">GitHub Link</a>
+                                </p>
+                            </div>
+                            <div class="progress-info">
+                                <h6 class="progress-tittle">Digital Forensics and Windows Payload - BLACKBUCKS</h6>
+                                <p>A team of 5 worked on 2 Cybersecurity projects based on sending a binded .exe payload to the victim's Windows using Metasploit to the victim's browser and obtaining reverse connection through it after downloading the file, bypassing router login, and analyzing the victim's router logs.</p>
+                            </div>
+                            <div class="progress-info">
+                                <h6 class="progress-tittle">AI & ML Based IoT applications - HMI ENGG SERVICES</h6>
+                                <p>Project based on applications of IoT using AI & ML by developing an automated equipment/device using an Arduino board, ultrasonic sensors, LEDs, and a little program uploaded into the Arduino using a PC/laptop for a Social distancing device (100 cm distance detection), with 5 equipments.</p>
+                            </div>
+                            <div class="progress-info">
+                                <h6 class="progress-tittle">Played a pivoting role in clearing CERT-In certification challenge in "Amyntor Tech Solutions Pvt. Ltd." as a cybersecurity analyst</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scroll-controls">
+                        <button onclick="scrollUp()">&#9650;</button>
+                        <button onclick="scrollDown()">&#9660;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //content-6-section -->
+
+<style>
+.scroll-frame {
+    height: 200px; /* Adjust height as needed */
+    overflow: hidden;
+    position: relative;
+}
+
+.scroll-content {
+    height: 100%;
+    overflow: auto;
+    padding-right: 20px; /* To avoid scrollbar overlap */
+}
+
+.scroll-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.scroll-controls button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.scroll-controls button:hover {
+    background-color: #0056b3;
+}
+</style>
+
+<script>
+function scrollUp() {
+    const scrollFrame = document.querySelector('.scroll-content');
+    scrollFrame.scrollBy({ top: -100, behavior: 'smooth' }); // Adjust the scroll value as needed
+}
+
+function scrollDown() {
+    const scrollFrame = document.querySelector('.scroll-content');
+    scrollFrame.scrollBy({ top: 100, behavior: 'smooth' }); // Adjust the scroll value as needed
+}
+</script>
+
+<!-- //content-6-section -->
+
    <!-- //content-6-section -->
    <section class="w3l-satisfied-main">
 	<!-- /specification-6-->
@@ -448,9 +513,9 @@
                     <div class="share-icons-footer ml-lg-4">
                         <!-- <a href="#"><span class="fa fa-facebook"></span></a>
                         <a href="#"><span class="fa fa-twitter"></span></a> -->
-                        <a href="https://www.linkedin.com/in/abhishek-dirisipo-0a6553240/"><span class="fa fa-linkedin"></span></a>
-                        <a href="https://github.com/Abhishek-Dirisipo/"><span class="fa fa-github"></span></a>
-                        <a href="mailto:abhishek.dirisipo@gmail.com"><span class="fa fa-google-plus" aria-hidden="true"></span></a>
+                        <a href="https://www.linkedin.com/in/abhishek-dirisipo-0a6553240/" target="_blank"><span class="fa fa-linkedin"></span></a>
+                        <a href="https://github.com/Abhishek-Dirisipo/" target="_blank"><span class="fa fa-github"></span></a>
+                        <a href="mailto:abhishek.dirisipo@gmail.com" target="_blank"><span class="fa fa-google-plus" aria-hidden="true"></span></a>
                     </div>
                 </div>
             </div>
