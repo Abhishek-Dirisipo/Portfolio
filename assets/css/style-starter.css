@@ -42,6 +42,8 @@ dl {
   padding: 0;
 }
 
+
+
 .form-control:focus {
   box-shadow: none !important;
 }
@@ -18627,4 +18629,42 @@ a.text-dark:focus {
   }
 }
 
+
 /*# sourceMappingURL=style-freedom.css.map */
+
+/* abhishek extra tool status floating table */
+
+        @keyframes pulse2 {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .tooltip3 span {
+            visibility: hidden;
+            width: 220px;
+            background-color: black;
+            color: #fff;
+            font-size: 15px;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -280px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip3:hover span {
+            visibility: visible;
+            opacity: 1;
+        }
