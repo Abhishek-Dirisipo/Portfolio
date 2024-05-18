@@ -566,112 +566,116 @@ function scrollDown() {
 <!-- //footer -->
 
 <!-- Animated My Tools Box -->
-    <div style="
-        position: fixed;
-        right: 20px;
-        bottom: 200px;
-        width: 230px;
-        height: 250px;
-        background-color: #fff;
-        border: 2px solid #ccc;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+<div id="my-tools-box" style="
+    position: fixed;
+    right: 20px;
+    bottom: 200px;
+    width: 230px;
+    height: 250px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1000;">
+    
+    <!-- Close Button -->
+    <button onclick="document.getElementById('my-tools-box').style.display='none'" style="
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;">
+        &times;
+    </button>
+    
+    <a href="https://github.com/Abhishek-Dirisipo/" target="_blank" style="
+        text-decoration: none;
+        color: #333;
+        font-size: 12px;
+        font-weight: bold;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        z-index: 1000;">
-        <a href="https://github.com/Abhishek-Dirisipo/" target="_blank" style="
-            text-decoration: none;
-            color: #333;
-            font-size: 12px;
-            font-weight: bold;
-            display: flex;
-            flex-direction: column;
-            align-items: center;">
-            <!-- Green Blinking Dot -->
-            <div style="
-                width: 12px;
-                height: 12px;
-                background-color: green;
-                border-radius: 50%;
-                animation: pulse2 1s infinite;
-                margin-bottom: 10px;">
-            </div>
-            <span><u>My Active tools</u></span>
+        align-items: center;">
+        <!-- Green Blinking Dot -->
+        <div style="
+            width: 12px;
+            height: 12px;
+            background-color: green;
+            border-radius: 50%;
+            animation: pulse2 1s infinite;
+            margin-bottom: 10px;">
+        </div>
+        <span><u>My Active tools</u></span>
+    </a>
+    
+    <ul>
+        <a class="tooltip3" style="position: relative; display: inline-block; font-size: 15px; font-weight: bold;" href="https://github.com/AmyntorInfoSec/Ultimate-XSS-Initiator" target="_blank">
+            <b><li>UXI (ultimate xss initiator)</li></b>
+            <span>
+                <br>Ultimate XSS Initiator <br><br>A powerful tool for finding <br> XSS, SSTI , Blind ssrf ,<br> Blind command injection,<br>sql error detection, <br>finding working parameters by selecting default payloads with 3 levels <br><br> main speciality is to bypass the sanitisers.
+            </span>
         </a>
-	            <ul>
-            <a class="tooltip3" style="position: relative; display: inline-block; font-size: 15px; font-weight: bold;" href="https://github.com/AmyntorInfoSec/Ultimate-XSS-Initiator" target="_blank">
-
-
-                <b><li>UXI (ultimate xss initiator)</li></b>
-                <span>
-                    <br>Ultimate XSS Initiator <br><br>A powerful tool for finding <br> XSS, SSTI , Blind ssrf ,<br> Blind command injection,<br>sql error detection, <br>finding working parameters by selecting default payloads with 3 levels <br><br> main speciality is to bypass the sanitisers.
-                </span>
-                
-             </a>
-             
-             <a class="tooltip3" style="position: relative; display: inline-block; font-size: 15px; font-weight: bold;" href="https://github.com/AmyntorInfoSec/Amyntor-Infosec-tools" target="_blank">
-                <br>
-	                
-                <b><li>ParamBlaster</li></b>
-                <span>
-                    <br>A tool to find working parameters by bruteforce based on some personal detection techniques. .
-                </span>
-             </a>
-             
-             <br>
-             <a class="tooltip3" style="position: relative; display: inline-block; font-size: 15px; font-weight: bold;" href="https://github.com/AmyntorInfoSec/Amyntor-Infosec-tools" target="_blank">
-                <br>
-	                
-                <b><li>O-Redirector</li></b>
-                <span>
-                    <br>A tool to find <br>Open Redirect vulnerability using parameters bruteforce.
-                </span>
-             </a>
-                
-                <br>
-	          </ul>      
-            </a>
-        </ul>
-        
-        
-        <a onclick=alert("i_disabled_these_tools,_these_are_not_for_public_currently") style="
-            text-decoration: none;
-            color: #333;
-            font-size: 12px;
-            font-weight: bold;
-            display: flex;
-            flex-direction: column;
-            align-items: center;">
-            <!-- Red Blinking Dot -->
-            <div style="
-                width: 12px;
-                height: 12px;
-                background-color: red;
-                border-radius: 50%;
-                animation: pulse2 1s infinite;
-                margin-bottom: 10px;">
-            </div>
-            <span><u>Deactivated tools</u></span>
+        <a class="tooltip3" style="position: relative; display: inline-block; font-size: 15px; font-weight: bold;" href="https://github.com/AmyntorInfoSec/Amyntor-Infosec-tools" target="_blank">
+            <br>
+            <b><li>ParamBlaster</li></b>
+            <span>
+                <br>A tool to find working parameters by bruteforce based on some personal detection techniques. .
+            </span>
         </a>
+        <br>
+        <a class="tooltip3" style="position: relative; display: inline-block; font-size: 15px; font-weight: bold;" href="https://github.com/AmyntorInfoSec/Amyntor-Infosec-tools" target="_blank">
+            <br>
+            <b><li>O-Redirector</li></b>
+            <span>
+                <br>A tool to find <br>Open Redirect vulnerability using parameters bruteforce.
+            </span>
+        </a>
+    </ul>
+    
+    <a onclick="alert('i_disabled_these_tools,_these_are_not_for_public_currently')" style="
+        text-decoration: none;
+        color: #333;
+        font-size: 12px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        align-items: center;">
+        <!-- Red Blinking Dot -->
+        <div style="
+            width: 12px;
+            height: 12px;
+            background-color: red;
+            border-radius: 50%;
+            animation: pulse2 1s infinite;
+            margin-bottom: 10px;">
+        </div>
+        <span><u>Deactivated tools</u></span>
+    </a>
 
-	         <ul>
-            <a class="tooltip3" style="position: relative; display: inline-block; font-size: 15px; font-weight: bold;" href=javascript:alert("i_disabled_these_tools,_these_are_not_for_public_currently") >
-
-
-                <b><li>UXI-2</li></b>
-                <span>
-                    <br>Ultimate Xss initiator 2 , is capable of finding DOM XSS by executing javascripts in the page by itself .
-                </span>
-                
-             </a>
-             </ul>
-
-        
-    </div>
+    <ul>
+        <a class="tooltip3" style="position: relative; display: inline-block; font-size: 15px; font-weight: bold;" href="javascript:alert('i_disabled_these_tools,_these_are_not_for_public_currently')">
+            <b><li>UXI-2</li></b>
+            <span>
+                <br>Ultimate Xss initiator 2 , is capable of finding DOM XSS by executing javascripts in the page by itself .
+            </span>
+        </a>
+    </ul>
+</div>
 <!-- Animated My Tools Box End -->
+
     
 </body>
 
