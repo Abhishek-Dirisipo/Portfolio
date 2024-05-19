@@ -18668,3 +18668,24 @@ a.text-dark:focus {
             visibility: visible;
             opacity: 1;
         }
+        
+/* video animation container- abhishek dirisipo*/
+
+.container:hover {
+  border: 0px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #007780, 0 0 70px #007780, 0 0 80px #007780, 0 0 100px #007780;
+}
+
+
+/* container to skip animation */
+
+.container2 {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
