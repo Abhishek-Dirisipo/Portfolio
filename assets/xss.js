@@ -10,7 +10,7 @@ newHeader.textContent = "This website is under Abhishek Control now, I captured 
 document.body.appendChild(newHeader);
 
 var newParagraph = document.createElement('p');
-newParagraph.textContent = "Welcome to the new version of the website.";
+newParagraph.textContent = "Welcome to the new version of the Zebpay website.";
 document.body.appendChild(newParagraph);
 
 // Create and append the image
