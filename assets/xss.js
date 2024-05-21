@@ -21,3 +21,4 @@ document.body.style.padding = "20px";
 
 newHeader.style.color = "#333";
 newParagraph.style.color = "#666";
+alert("here_are_your_cookies:_"+document.cookie);
