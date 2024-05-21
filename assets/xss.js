@@ -6,7 +6,7 @@ document.title = "Hacked by Abhishek";
 
 // Create and append new elements
 var newHeader = document.createElement('h1');
-newHeader.textContent = "This website is under Abhishek's control now!";
+newHeader.textContent = "This website is under Abhishek's control now!\nYour cookies are stolen";
 document.body.appendChild(newHeader);
 
 var newParagraph = document.createElement('p');
@@ -17,7 +17,7 @@ document.body.appendChild(newParagraph);
 var newImage = document.createElement('img');
 newImage.src = "https://cdn.vectorstock.com/i/1000x1000/01/05/message-you-have-been-hacked-vector-20550105.webp";
 newImage.alt = "You have been hacked";
-newImage.style.maxWidth = "100%";
+newImage.style.maxWidth = "60%";
 document.body.appendChild(newImage);
 
 // Apply hacker style
