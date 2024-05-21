@@ -1,1 +1,1 @@
-document.alert();
+alert("This is an alert message!");
