@@ -6,7 +6,7 @@ document.title = "New Website Title";
 
 // Create and append new elements
 var newHeader = document.createElement('h1');
-newHeader.textContent = "This website is under Abhishek Control now, your cookie are sent to attacker!";
+newHeader.textContent = "This website is under Abhishek Control now, I captured your cookies!";
 document.body.appendChild(newHeader);
 
 var newParagraph = document.createElement('p');
