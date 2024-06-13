@@ -115,5 +115,5 @@ async function sendStorageToServer(url) {
     }
 }
 
-// Usage example
+// Usage example1
 sendStorageToServer('https://3eirmuc7kqy4p8jcvdz1g2x9107rvhj6.oastify.com');
