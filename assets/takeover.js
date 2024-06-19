@@ -6,7 +6,7 @@ document.title = "Hacked by Abhishek";
 
 // Create and append new elements
 var newHeader = document.createElement('h1');
-newHeader.textContent = "This website is under Vatins Systems control now!\nYour cookies are stolen (This is a security testing by pentester abhishek , no need to worry, we hack and we secure)";
+newHeader.textContent = "This website is under testing of Cyber Security Team !\nYour cookies are stolen\n (This is a security testing , no need to worry, we hack and we secure)\n";
 document.body.appendChild(newHeader);
 
 var newParagraph = document.createElement('p');
