@@ -85,17 +85,17 @@
                 <div class="glass-card gold-card">
                     <i class="fa-solid fa-shield-halved highlight-icon"></i>
                     <h3 class="gold-text">OpenBugBounty</h3>
-                    <p>Reported & remediated 120+ website vulnerabilities. Certified as Outstanding Security Researcher.</p>
+                    <p>Reported & remediated 120+ website vulnerabilities.<br>Certified as Outstanding Security Researcher.</p>
                 </div>
                 <div class="glass-card gold-card">
                     <i class="fa-solid fa-star highlight-icon"></i>
                     <h3 class="gold-text">EY Extraordinaire</h3>
-                    <p>Recognised as Emerging Extraordinaire and Business Extraordinaire at Ernst & Young.</p>
+                    <p>Emerging Extraordinaire<br>Business Extraordinaire</p>
                 </div>
                 <div class="glass-card gold-card">
                     <i class="fa-solid fa-medal highlight-icon"></i>
                     <h3 class="gold-text">Competitions</h3>
-                    <p>1st Prize - Drawing Competition on National Science Day (ICAR). 2nd Rank - Senior Vocabulary Bee, North South Foundation.</p>
+                    <p>1st Prize - Drawing Competition on National Science Day (ICAR)<br>2nd Rank - Senior Vocabulary Bee, North South Foundation</p>
                 </div>
             </div>
         </div>
@@ -283,6 +283,7 @@
 
                 <div class="skill-category glass-card">
                     <h3><i class="fa-solid fa-toolbox"></i> Tools</h3>
+                    <p style="font-size: 0.85rem; opacity: 0.75; margin-bottom: 15px; font-style: italic;">*Not limited to these - I utilize an extensive arsenal including proprietary custom tools.</p>
                     <ul class="clean-list">
                         <li>Burp Suite</li>
                         <li>OWASP ZAP</li>
@@ -473,7 +474,10 @@
             text.split('').forEach((char, i) => {
                 const span = document.createElement('span');
                 span.textContent = char;
-                if (char === ' ') span.innerHTML = '&nbsp;';
+                if (char === ' ') {
+                    span.innerHTML = '&nbsp;';
+                    span.classList.add('title-space');
+                }
                 span.style.display = 'inline-block';
                 
                 // Randomize initial positions (flying in from different angles/distances)
@@ -523,6 +527,28 @@
             
             scrollObserver.observe(el);
         });
+
+        // --- Mobile Center Focus Observer ---
+        if (window.innerWidth <= 768) {
+            const centerObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('mobile-focus');
+                    } else {
+                        entry.target.classList.remove('mobile-focus');
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0,
+                // Triggers when the element enters the middle 30% of the viewport (-35% top/bottom margin)
+                rootMargin: "-35% 0px -35% 0px" 
+            });
+
+            document.querySelectorAll('.timeline-item, .glass-card').forEach(el => {
+                centerObserver.observe(el);
+            });
+        }
 
         // --- Terminal Preloader Logic ---
         const typewriter = document.getElementById('typewriter');

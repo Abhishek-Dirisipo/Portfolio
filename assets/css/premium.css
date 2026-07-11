@@ -317,8 +317,28 @@ h3:not(.gold-text), h4:not(.subtitle) {
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background: var(--primary);
-    box-shadow: 0 0 10px var(--primary);
+    background: #ff2a2a;
+    box-shadow: 0 0 10px rgba(255, 42, 42, 0.6);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.timeline-item .timeline-content {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.timeline-item:hover .timeline-content {
+    transform: translateX(10px);
+    border-color: rgba(191, 149, 63, 0.5);
+    background: rgba(191, 149, 63, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(191, 149, 63, 0.2);
+}
+.timeline-item:hover .timeline-dot {
+    transform: scale(1.5);
+    box-shadow: 0 0 20px #bf953f, 0 0 40px #bf953f;
+    background: #bf953f;
+}
+.timeline-item:hover .timeline-content h3 {
+    background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .timeline-header {
     margin-bottom: 1.5rem;
@@ -329,22 +349,25 @@ h3:not(.gold-text), h4:not(.subtitle) {
 }
 .timeline-header .company {
     display: block;
-    color: var(--primary);
-    font-weight: 500;
-    margin-bottom: 0.3rem;
+    color: #ff2a2a;
+    text-shadow: 0 0 10px rgba(255, 42, 42, 0.4);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
 }
 .timeline-header .date {
     font-family: var(--font-mono);
-    color: var(--text-muted);
-    font-size: 0.9rem;
+    color: #a5b4fc; /* Bright futuristic blue instead of dull gray */
+    font-size: 0.95rem;
 }
 .timeline-details {
     list-style-position: inside;
     list-style-type: disc;
-    color: var(--text-muted);
+    color: #d1d5db; /* Richer silver text */
+    line-height: 1.7;
 }
 .timeline-details li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 .note {
     margin-top: 1.5rem;
@@ -724,12 +747,24 @@ footer {
         grid-template-columns: 1fr;
     }
     
-    /* Make terminal loading text fit screen */
+    /* Make terminal loading text fit perfectly on mobile */
     .terminal-content {
-        font-size: 0.95rem;
+        font-size: 1rem;
         padding: 0 1rem;
-        word-break: break-all;
-        text-align: center;
+        text-align: left;
+    }
+    
+    /* Stack the prompt and command on mobile to avoid long wrapping */
+    .terminal-content .prompt {
+        display: block;
+        margin-bottom: 5px;
+        opacity: 0.8;
+    }
+
+    /* Force the name "Abhishek Dirisipo" onto two lines for shatter animation */
+    .title-space {
+        display: block !important;
+        height: 0;
     }
 
     /* Make the logo pun text wrap so it doesn't push the hamburger menu off-screen */
@@ -737,5 +772,28 @@ footer {
         font-size: 0.6rem;
         white-space: normal;
         max-width: 160px;
+    }
+    /* Mobile Center Auto-Focus for hover states */
+    .timeline-item.mobile-focus .timeline-content {
+        transform: translateX(10px);
+        border-color: rgba(191, 149, 63, 0.5);
+        background: rgba(191, 149, 63, 0.05);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(191, 149, 63, 0.2);
+    }
+    .timeline-item.mobile-focus .timeline-dot {
+        transform: scale(1.5);
+        box-shadow: 0 0 20px #bf953f, 0 0 40px #bf953f;
+        background: #bf953f;
+    }
+    .timeline-item.mobile-focus .timeline-content h3 {
+        background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .glass-card.mobile-focus:not(.timeline-content) {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
 }
